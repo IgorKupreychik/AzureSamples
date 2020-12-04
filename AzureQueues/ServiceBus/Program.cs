@@ -40,12 +40,12 @@ namespace ServiceBus
             }
 
 
-            while (await client.MessageCount(queueName) > 0)
-            {
-                ServiceBusReceivedMessage message = await client.ReceiveMessageAsync(queueName);
+            //while (await client.MessageCount(queueName) > 0)
+            //{
+            //    ServiceBusReceivedMessage message = await client.ReceiveMessageAsync(queueName);
 
-                Container container = JsonConvert.DeserializeObject<Container>(Encoding.UTF8.GetString(message.Body));
-            }
+            //    Container container = JsonConvert.DeserializeObject<Container>(Encoding.UTF8.GetString(message.Body));
+            //}
         }
     }
 }
